@@ -1,4 +1,5 @@
 pub fn add(left: u64, right: u64) -> u64 {
+    let hoge = 0;
     left + right
 }
 
