@@ -1,0 +1,18 @@
+name: create_artifact
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]  # todo remove
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - run: date > date.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: uploaded
+          path: date.txt
+          retention-days: 1
