@@ -3,8 +3,6 @@ name: create_artifact
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]  # todo remove
 
 jobs:
   upload:
